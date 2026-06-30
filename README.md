@@ -1,85 +1,162 @@
 # Predictive Lead Conversion Analysis
 
-## Project Overview
-This project focuses on analyzing lead generation data and predicting whether a lead will convert into a customer. The project combines data cleaning, exploratory data analysis (EDA), dashboard creation, and machine learning techniques to generate business insights and improve lead conversion prediction.
+## Overview
 
-## Tools Used
+Developed an end-to-end machine learning solution to predict lead conversion and identify the key factors influencing customer acquisition. The project combines exploratory data analysis, feature engineering, predictive modeling, and interactive business intelligence dashboards to support data-driven sales and marketing decisions.
+
+---
+
+## Business Problem
+
+Organizations generate thousands of leads through multiple campaigns, but only a small percentage convert into customers. The objective of this project is to:
+
+- Predict lead conversion using machine learning
+- Identify high-performing lead sources and campaigns
+- Analyze sales representative performance
+- Build dashboards for business stakeholders
+
+---
+
+## Tech Stack
+
+**Programming**
 - Python
 - Pandas
 - NumPy
-- Matplotlib
-- Seaborn
+
+**Machine Learning**
 - Scikit-learn
 - XGBoost
-- Excel
-- Tableau
+- SMOTE
+
+**Visualization**
+- Matplotlib
+- Seaborn
 - Power BI
+- Tableau
+- Excel
+
+---
 
 ## Project Workflow
 
-1. Data Cleaning and Feature Engineering
-- Removed irrelevant columns
-- Handled missing values
-- Converted date columns to datetime format
-- Created new features such as:
-     - Interaction Hours
-     - First Contact Delay Hours
-     - Lead Age
-     - Contacted Status
-     - Follow-up Status
+```
+Raw Data
+      ↓
+Exploratory Data Analysis
+      ↓
+Data Cleaning & Feature Engineering
+      ↓
+Machine Learning
+      ↓
+Model Evaluation
+      ↓
+Business Dashboards
+```
 
-2. Exploratory Data Analysis (EDA)
-- Lead conversion distribution analysis
-- Lead source performance analysis
-- Campaign performance analysis
-- Salesperson-wise conversion analysis
+---
 
-3. Machine Learning Models
+## Exploratory Data Analysis
 
-The following models were trained and evaluated:
+Performed exploratory analysis to identify patterns affecting lead conversion, including:
+
+- Lead stage distribution
+- Lead source performance
+- Campaign effectiveness
+- Sales executive performance
+- Conversion trends
+- Missing value analysis
+
+---
+
+## Feature Engineering
+
+Created business-focused features including:
+
+- Lead Age
+- Interaction Hours
+- First Contact Delay
+- Contacted Status
+- Follow-up Status
+
+---
+
+## Machine Learning Models
+
+Models evaluated:
 
 - Logistic Regression
-- Logistic Regression with SMOTE
+- Logistic Regression (SMOTE)
 - XGBoost Classifier
 
-4. Model Evaluation
-
-Models were compared using:
+Evaluation Metrics:
 
 - Accuracy
 - Precision
 - Recall
 - F1 Score
-- ROC-AUC Score
+- ROC-AUC
 - Confusion Matrix
-- ROC Curve
 
-## Key Findings
-- The dataset was highly imbalanced, making accuracy alone an unreliable metric.
-- Logistic Regression achieved the highest accuracy but failed to identify many converted leads due to low recall.
-- Applying SMOTE significantly improved recall, helping identify more potential conversions.
-- XGBoost achieved the highest ROC-AUC score (0.947) and provided the best balance between identifying converted leads and overall predictive performance.
-- Based on the evaluation metrics, XGBoost was selected as the preferred model for lead conversion prediction.
+---
 
-## Dashboard Development
+## Results
 
-Interactive dashboards were created using:
+| Model | ROC-AUC |
+|--------|---------|
+| Logistic Regression | **0.916**  |
+| Logistic Regression (SMOTE) | **0.920**  |
+| XGBoost | **0.947** |
 
-Excel
-Tableau
-Power BI
+### Key Findings
 
-The dashboards provide insights into:
+- Addressed severe class imbalance using SMOTE.
+- XGBoost achieved the highest ROC-AUC (0.947), delivering the best overall predictive performance.
+- Feature engineering significantly improved model performance and interpretability.
+- Interactive dashboards enabled analysis of campaign effectiveness, lead sources, and sales performance.
 
-- Lead source performance
-- Campaign effectiveness
-- Conversion trends
-- Sales performance
+---
+
+## Dashboards
+
+Built interactive dashboards in:
+
+- Excel
+- Tableau
+- Power BI
+
+Key business insights include:
+
+- Lead conversion trends
+- Campaign performance
+- Lead source analysis
+- Sales executive performance
+- KPI monitoring
+
+
+---
+
+## Repository Structure
+
+```
+├── data
+├── notebooks
+│   ├── 01_eda.ipynb
+│   ├── 02_cleaning_feature_engineering.ipynb
+│   └── 03_modeling.ipynb
+├── images
+├── README.md
+└── requirements.txt
+```
+
+---
 
 ## Dataset
 
-The dataset used for this project is not included in this repository due to privacy considerations.
+The dataset is not included in this repository due to confidentiality. The project structure and notebooks are provided for educational and portfolio purposes.
+
+---
 
 ## Author
 
-Akhina Manual
+**Akhina Manual**
